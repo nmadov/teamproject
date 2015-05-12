@@ -17,10 +17,26 @@ function doThingWithData(data) {
 	 	var list = results[i];
 	 	var title = list.book_details[0].title;
 	 	var author = list.book_details[0].author;
-	 	$('<h1>').text(title).appendTo(document.body);
-	 	$('<h2>').text("by " + author).appendTo(document.body);
+	 	var description = list.book_details[0].description
+	 	var listItem = '<li><h1>' + title +  '</h1></li>' + '<h2>' + author + '</h2>' + 
+	 	'<i>' + description + '</i>';
+	 	$('#auth').append(listItem);
+
+	 	// $('<h1>').text(title).appendTo(document.body);
+	 	// $('#auth').text("by " + author).appendTo(document.body);
+	 	//$('#auth').append(listItem);
 	 }
 }
+// function runSearch(){
+
+// 		var rows = $('#uni-list li');
+// 		$('#search-box').keyup(function(){
+// 			var val = $.trim($(this).val()).replace(/ +/g, ' ').toLowerCase();
+
+// 			rows.show().filter(function(){
+// 				var text = $(this).text().replace(/\s+/g, ' ').toLowerCase();
+// 				return !~text.indexOf(val);
+// 			}).hide();
 
 
 
