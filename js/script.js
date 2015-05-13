@@ -18,7 +18,7 @@ function doThingWithData(data) {
 	 	var title = list.book_details[0].title;
 	 	var author = list.book_details[0].author;
 	 	var description = list.book_details[0].description
-	 	var listItem = '<li><h1>' + title +  '</h1></li>' + '<h2>' + author + '</h2>' + 
+	 	var listItem = '<div><li>' + title +  '</li>' + '<h2>' + author + '</h2></div>' + 
 	 	'<i>' + description + '</i>';
 	 	$('#auth').append(listItem);
 
@@ -27,16 +27,20 @@ function doThingWithData(data) {
 	 	//$('#auth').append(listItem);
 	 }
 }
-// function runSearch(){
 
-// 		var rows = $('#uni-list li');
-// 		$('#search-box').keyup(function(){
-// 			var val = $.trim($(this).val()).replace(/ +/g, ' ').toLowerCase();
+$('#search-box').keyup(function(){
+	var search = $(this).val().toLowerCase();
+	var $rows = $('#auth div');
+	$rows.show();
+	_($rows).each(function(row){
+		var title = $(row).find('li').text().toLowerCase();
+		if (title.indexOf(search) == -1){
+			$(row).hide();
+		}
+	})
 
-// 			rows.show().filter(function(){
-// 				var text = $(this).text().replace(/\s+/g, ' ').toLowerCase();
-// 				return !~text.indexOf(val);
-// 			}).hide();
+})
+
 
 
 
