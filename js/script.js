@@ -32,7 +32,7 @@ $('#search-box').keyup(function(){
 	var search = $(this).val().toLowerCase();
 	var $rows = $('#auth div');
 	$rows.show();
-	_(rows).each(function(row){
+	_($rows).each(function(row){
 		var title = $(row).find('li').text().toLowerCase();
 		if (title.indexOf(search) == -1){
 			$(row).hide();
