@@ -1,1 +1,41 @@
-body{background-color: black;}
+body{margin: 0px;
+font-family: 'PT Sans', sans-serif;}
+
+.main{ height: 700px;
+	  background-position: center center;
+	  background-repeat: no-repeat; 
+	  background-size: cover}
+
+@media screen and (min-width: 100px){#container{height:700px;
+		   width: 1000px;
+		   margin:0 auto; }}
+
+#auth{color:black;
+	}
+
+
+.header{margin-top: 0px;
+		width:1000px;}
+nav{top:26px;
+	float: right}
+
+.navbar{color:black;
+		font-size: 20px;
+		margin-left: 25px;
+		text-decoration: none;}
+.navbar:hover{text-decoration: underline;}	  
+
+
+
+h1{font-size: 40px;
+   color: black;
+   text-align: left;
+   clear:both;
+   padding-top: 20px;
+text-shadow:2px 2px #eaeaea;}
+
+h2{
+	color: black;
+}
+
+
