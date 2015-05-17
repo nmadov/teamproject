@@ -18,13 +18,13 @@ function doThingWithData(data) {
 	 	var title = list.book_details[0].title;
 	 	var author = list.book_details[0].author;
 	 	var description = list.book_details[0].description
-	 	var listItem = '<div><h2><li>' + title +  '</li></h2>' + '<h3>' + author + '</h3></div>' + 
+	 	var listItem = '<div><b><li>' + title +  '</li></b>' + author + '</div>' + 
 	 	'<i>' + description + '</i>';
 	 	$('#auth').append(listItem);
 
 	 	// $('<h1>').text(title).appendTo(document.body);
 	 	// $('#auth').text("by " + author).appendTo(document.body);
-	 	//$('#auth').append(listItem);
+	 	// $('#auth').append(listItem);
 	 }
 }
 
