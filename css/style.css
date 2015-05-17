@@ -1,5 +1,7 @@
 body{margin: 0px;
-font-family: 'PT Sans', sans-serif;}
+font-family: 'PT Sans', sans-serif;
+background-color: #E7E6EC;
+}
 
 .main{ height: 700px;
 	  background-position: center center;
@@ -11,6 +13,11 @@ font-family: 'PT Sans', sans-serif;}
 		   margin:0 auto; }}
 
 #auth{color:black;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	background-color: #FBFAFF;
+	margin-left: 10px; 
+	width: 70%;
 	}
 
 
@@ -39,7 +46,10 @@ h2{
 }
 
 p{
-	color:gray;
+	color:black;
+}
+.credits{
+	padding-bottom: 20px;
 }
 
 

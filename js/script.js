@@ -18,8 +18,8 @@ function doThingWithData(data) {
 	 	var title = list.book_details[0].title;
 	 	var author = list.book_details[0].author;
 	 	var description = list.book_details[0].description
-	 	var listItem = '<div><b><li>' + title +  '</li></b>' + author + '</div>' + 
-	 	'<i>' + description + '</i>';
+	 	var listItem = '<div><b><li>' + title +  '</li></b>' + 'by ' + author + '</div>' + 
+	 	'<p><i>' + description + '</i></p>';
 	 	$('#auth').append(listItem);
 
 	 	// $('<h1>').text(title).appendTo(document.body);
