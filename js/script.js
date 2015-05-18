@@ -18,8 +18,8 @@ function doThingWithData(data) {
 	 	var title = list.book_details[0].title;
 	 	var author = list.book_details[0].author;
 	 	var description = list.book_details[0].description
-	 	var listItem = '<div><b><li>' + title +  '</li></b>' + 'by ' + author + '</div>' + 
-	 	'<p><i>' + description + '</i></p>';
+	 	var listItem = '<li><p><b>' + title +  '' + ' by ' + author + '</b>' + 
+	 	'<i>' + description + '</i></p></li>';
 	 	$('#auth').append(listItem);
 
 	 	// $('<h1>').text(title).appendTo(document.body);
@@ -30,11 +30,11 @@ function doThingWithData(data) {
 
 $('#search-box').keyup(function(){
 	var search = $(this).val().toLowerCase();
-	var $rows = $('#auth div');
+	var $rows = $('#auth li');
 	$rows.show();
 	_($rows).each(function(row){
-		var title = $(row).find('li').text().toLowerCase();
-		if (title.indexOf(search) == -1){
+		var titles = $(row).find('p').text().toLowerCase();
+		if (titles.indexOf(search) == -1){
 			$(row).hide();
 		}
 	})
